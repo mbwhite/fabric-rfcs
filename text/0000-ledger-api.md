@@ -271,7 +271,6 @@ Details on the history can be obtained for whatever the contract requires.
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
 
-The following table lists, the conceptual target and function, how they are rendered in Java. The final column indicates the methods providing the function. 
 
 | Target Object              | Function                          | Java Rendering                                                      | Existing Java Method                                                                                   |
 | -------------------------- | --------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -343,38 +342,3 @@ We have reviewed the same interface approach within Golang, and Node.js (both Ja
 
 This is a compliment to the existing APIs, which may still be used without issue; they remain and are accessed in the same manner as previously.
 
-
-# Drawbacks
-[drawbacks]: #drawbacks
-
-As discussed in the motivation, this is being proposed to bring consistent level of abstraction across the languages, and remove any variation in existing implementations.
-
-# Rationale and alternatives
-[alternatives]: #alternatives
-
-This is the amalgamation of experience in the field having seen solutions be implemented and the challenges encountered.
-We have chosen not to include the serialization of an object to and from the ledger; this will be the subject of a subsequent API.
-Likewise, the 'transaction' APIs are not included. 
-
-For reference some of the issues that can be resolved or highlight API differences
-
-- Iteartor confusion: https://jira.hyperledger.org/browse/FABCN-222
-- State-based Endorsement Policy: https://jira.hyperledger.org/browse/FABCN-304
-- Put/Get State on JSON objs: https://jira.hyperledger.org/browse/FABCN-92
-- Rich Query Improvement: https://jira.hyperledger.org/browse/FABCN-133
-- GetStateByPartialCompositeKey with full keys https://jira.hyperledger.org/browse/FABCN-376
-- Invoke Chaincode https://jira.hyperledger.org/browse/FABCN-111
-- Blind Writes https://jira.hyperledger.org/browse/FAB-10480
-- MSPId support https://jira.hyperledger.org/browse/FABCJ-276
-
-# Prior art
-[prior-art]: #prior-art
-
-Significant experience and feedback has now been gained from user adoption of this programming model in Node and Java which have led to incremental improvements.
-
-We know custom written code that as been used in different projects all of which has contributing to the thinking.
-
-# Unresolved questions
-[unresolved]: #unresolved-questions
-
-None.
